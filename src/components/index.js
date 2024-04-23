@@ -1,2 +1,0 @@
-// Abdulla
-//Dilwod silniy
