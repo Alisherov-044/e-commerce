@@ -1,0 +1,52 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+#root {
+    @include flex(column, unset, unset);
+    @include full-relative;
+    min-height: 100vh;
+}
+
+main {
+    height: 100%;
+    flex: 1 1 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+ol,
+ul,
+li {
+    list-style: none;
+}
+
+button,
+input,
+textarea {
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    position: relative;
+    width: 100vw;
+    padding-inline: 48px;
+    margin-inline: auto;
+}
