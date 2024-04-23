@@ -1,3 +1,0 @@
-// Abdulla
-//Dilwod silniy
-// Lutfulla
