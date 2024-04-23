@@ -1,0 +1,84 @@
+@mixin flex($direction, $align, $justify, $gap: 0, $wrap: nowrap) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+    flex-wrap: $wrap;
+    gap: $gap;
+}
+
+@mixin flex-center($direction: unset) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: $direction;
+}
+
+@mixin absolute-center($z-index: 1) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: $z-index;
+}
+
+@mixin absolute-corner($Y: top, $X: left) {
+    @if $Y != ('top' or 'bottom') {
+        @error '#{$Y} position should be `top` or `bottom`';
+    }
+
+    @if $X != ('right' or 'left') {
+        @error '#{$X} position should be `right` or `left`';
+    }
+
+    position: absolute;
+    $Y: 0;
+    $X: 0;
+}
+
+@mixin full-relative {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+@mixin circle($width, $height) {
+    @if $width != $height {
+        @error 'in order to create a circle `width` and `height` must be equale!';
+    }
+
+    width: $width;
+    height: $height;
+    border-radius: 50%;
+}
+
+@mixin square($width, $height, $b-radius: 0) {
+    width: $width;
+    height: $height;
+    border-radius: $b-radius;
+}
+
+@mixin font($size, $l-heigth, $wight) {
+    font-size: $size;
+    line-height: $l-heigth;
+    font-weight: $wight;
+}
+
+$maxWidth: 1920;
+$maxWidthContainer: 1920;
+@mixin adaptive-value($property, $startSize, $minSize) {
+  $addSize: $startSize - $minSize;
+  #{$property}: $startSize + px;
+  @media (max-width:#{$maxWidthContainer + px}) {
+    #{$property}: calc(
+      #{$minSize + px} + #{$addSize} *
+        ((100vw - 320px) / #{$maxWidthContainer - 320})
+    );
+  }
+}
+
+@mixin media($max-width) {
+    @media (max-width: #{$max-width + px}) {
+        @content;
+    }
+}

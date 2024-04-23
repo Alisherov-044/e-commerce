@@ -1,0 +1,6 @@
+// git add .
+// git commit -m '<comment>'
+// git push origin <branch nomi>
+// git pull origin <branch nomi>
+
+// git status
