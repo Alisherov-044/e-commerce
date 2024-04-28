@@ -16,6 +16,11 @@ export const Icons = {
             </svg>
         );
     },
+    arrow: {
+        right: () => {},
+        left: () => {},
+        rightPointer: () => {}
+    },
     search: (props) => {
         return (
             <svg
