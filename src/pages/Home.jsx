@@ -1,3 +1,8 @@
+import Swiper from "../components/Swiper";
 export function Home() {
-    return <main>Home</main>;
+    return (
+        <main>
+            <Swiper></Swiper>
+        </main>
+    );
 }
