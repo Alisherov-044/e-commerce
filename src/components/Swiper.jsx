@@ -42,7 +42,7 @@ export default () => {
                     <img
                         className="swiper__img"
                         src="../public/b57f281c085144942f87ae7af7e7ba0f.png"
-                        alt=""
+                        alt="Notebook"
                     />
                 </div>
             </SwiperSlide>
@@ -64,7 +64,7 @@ export default () => {
                     <img
                         className="swiper__img"
                         src="../public/b57f281c085144942f87ae7af7e7ba0f.png"
-                        alt=""
+                        alt="Notebook"
                     />
                 </div>
             </SwiperSlide>
@@ -86,7 +86,7 @@ export default () => {
                     <img
                         className="swiper__img"
                         src="../public/b57f281c085144942f87ae7af7e7ba0f.png"
-                        alt=""
+                        alt="Notebook"
                     />
                 </div>
             </SwiperSlide>
@@ -109,7 +109,7 @@ export default () => {
                     <img
                         className="swiper__img"
                         src="../public/b57f281c085144942f87ae7af7e7ba0f.png"
-                        alt=""
+                        alt="Notebook"
                     />
                 </div>
             </SwiperSlide>
